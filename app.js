@@ -116,6 +116,10 @@ if (error) {
 // res.send(registerUser);
 // });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 app.use("/listings",listingsRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
