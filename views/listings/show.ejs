@@ -136,7 +136,34 @@
     </div>
   </div>
 
-</div> <!-- container end -->
+  <!-- bookings -->
+  <div class="booking-box card shadow p-4 mb-5">
+      <h4 class="card-title">Reserve</h4>
+      <form action="/bookings/<%= listing._id %>" method="POST" class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Check-in</label>
+              <input type="date" name="checkIn" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Check-out</label>
+              <input type="date" name="checkOut" class="form-control" required />
+            </div>
+          </div>
+
+          <div class="mt-4 d-flex justify-content-between align-items-center">
+            <p class="price mb-0 fs-5">
+              <b>₹ <%= listing.price.toLocaleString("en-IN") %></b> / night
+            </p>
+            <input type="hidden" name="totalPrice" value="<%= listing.price %>">
+            <button class="btn btn-danger px-5">Book Now</button>
+          </div>
+        </form>
+</div>
+</div> 
+<!-- container end -->
+
+
 
 <script>
     // Database se coordinates aur details lena

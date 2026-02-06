@@ -6,6 +6,7 @@ body{
 }
 .container{
     flex: 1;
+    
 }
 #map {
   height: 400px;
@@ -104,6 +105,66 @@ font-weight: 400;
 .btns{
     display: flex;
 }
+.booking-box {
+ background-color: #fff;
+    border: 1px solid #dfe3e7;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    max-width: 400px; /* Prevents the card from stretching too wide */
+    margin: 2rem auto; /
+}
+/* Hide the loose booking form at the top/bottom */
+.container > form[action^="/bookings"] {
+    display: none;
+}
+.booking-box h4 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.date-group {
+  display: flex;
+  gap: 10px;
+}
+
+.date-group div {
+  flex: 1;
+}
+
+.date-group label {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.date-group input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.price {
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ff385c;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #e03150;
+}
+
 /* .show-card{
     padding-left: 0;
     padding-right: 0;

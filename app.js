@@ -116,6 +116,13 @@ if (error) {
 // res.send(registerUser);
 // });
 
+//bookings
+const bookingRoutes = require("./routes/booking");
+
+app.use("/bookings", bookingRoutes);
+
+
+
 app.get("/", (req, res) => {
   res.redirect("/listings");
 });
